@@ -70,6 +70,8 @@ header .logo {
     justify-content: center;
     align-items: center;
     gap: 1em;
+
+    color: rgba(234, 234, 234, 0.823);
 }
 
 nav > ul {
@@ -79,8 +81,12 @@ nav > ul {
     gap: 1em;
 }
 
-.shopping-cart-container {
+nav a:hover {
     color: white;
+}
+
+.shopping-cart-container {
+    color: inherit;
     height: 20px;
     width: 20px;
 }
@@ -101,6 +107,11 @@ nav > ul {
 
     display: flex;
     align-items: center;
+
+
+    background-position-x: var(--mouse-x);
+    background-position-y: var(--mouse-y);
+
 }
 
 .hero-content-container {
@@ -130,11 +141,11 @@ nav > ul {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1em;
+    gap: 50px;
 }
 
 .hero-cta {
-    padding: .2em .5em;
+    padding: .4em 1.5em;
     background-color: var(--clr-accent);
     font-size: 25px;
 
@@ -148,16 +159,20 @@ nav > ul {
 
 
 .hero-secondary-cta {
-    font-size: 16px;
+    font-size: 20px;
 
     display: flex;
     flex-direction: row;
-    width: max-content;
+    align-items: center;
+    gap: 5px;
+    /* width: max-content; */
 }
 .icon-arrow-right {
     transition: 200ms ease-in-out;
-
+    height: 1.2em;
+    width: 1.2em;
 }
+
 
 .hero-secondary-cta:hover .icon-arrow-right {
 
