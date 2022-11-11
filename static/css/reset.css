@@ -24,10 +24,16 @@ a:hover {
 
 a {
     text-decoration: none !important;
-    color: inherit !important;
+    color: inherit;
 }
 
 a:visited {
     text-decoration: none !important;
-    color: inherit !important;
+    color: inherit;
+}
+
+
+img {
+    max-height: 100%;
+
 }

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DELICIOSO</title>
+    <link rel="icon" href="./static/svg/Icon logo.svg"/>    
 
     <link rel="stylesheet" href="./static/css/reset.css"/>
     <link rel="stylesheet" href="./static/css/main.css"/>
+    <link rel="stylesheet" href="./static/css/footer.css"/>
 
     <script src="./static/js/main.js" defer></script>
 </head>
@@ -120,6 +122,16 @@
                                 <span>Acclaimed Dishes</span>
                             </div>
                         </div>
+                        <div>
+                            <a class="cta">
+                                <span>
+                                    Order Now
+                                </span>
+                                <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path fill="currentcolor" stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>    
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="img-container">
@@ -151,43 +163,97 @@
             </ul>
         </section>
 
-        <section id="section-location">
 
+        <section id="section-2" class="double-section">
+            <div class="content">
+                <div class="img-container">
+                    <!-- <img src="./static/pictures/egg-toast.jpg" class="section-img"/> -->
+                </div>
+                <div>
+                    <div class="text-container">
+                        <div class="headers">
+                            <span class="topic header-small">Atmosphere</span>
+                            <h3 class="header header-large clr-accent">A Location Like No Other</h3>
+                        </div>
+                        <p class="text">On the other hand, we denounce with righteous indignation and dislike men 
+                            who are so beguiled and demoralized by the charms of pleasure of the moment, 
+                            so blinded by desire, that they cannot foresee the pain and trouble that are 
+                            bound to ensue; and equal blame belongs to those who fail in their duty</p>
+                    
+                        <!-- <div class="stats">
+                            <div class="single-stat">
+                                <span class="number-container">
+                                    <span class="number stat-count-number">17</span>
+                                    <span class="clr-accent">+</span>
+                                </span>
+                                <span>Years Of Experience</span>
+                            </div>
+                            <div class="single-stat">
+                                <span class="number-container">
+                                    <span class="number stat-count-number">32</span>
+                                    <span class="clr-accent">+</span>
+                                </span>
+                                <span>Acclaimed Dishes</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+               
+            </div>
+            
         </section>
 
-        <!-- <section id="section-location" class="bg-bright">
-      
+
+        <!-- <section id="section-2">
+            <div class="one">
+                <span class="img-container"></span>
+            </div>
+            <div class="two">
+
+            </div>
         </section> -->
 
-
-        <!-- <div class="filler">
-
-        </div> -->
-
+       
     </main>
     <footer>
-        <ul>
-            <li>facebook</li>
-            <li>instagram</li>
-            <li>whatsapp</li>
+        <ul class="socials">
+            <li>
+                <img src="./static/pictures/logos/facebook.svg"/>
+            </li>
+            <li>
+                <img src="./static/pictures/logos/instagram.svg"/>
+            </li>
+            <li>
+                <img src="./static/pictures/logos/whatsapp.svg"/>
+            </li>
         </ul>
         <ul>
             <li>
-                <a>link 1</a>
+                <a>Reviews</a>
             </li>
             <li>
-                <a>link 2</a>
+                <a>Order Online</a>
             </li>
             <li>
-                <a>link 3</a>
+                <a>About Us</a>
             </li>
             <li>
-                <a>link 4</a>
+                <a>Menu</a>
             </li>
         </ul>
         <div class="newsletter-container">
-            Join our newsletter and save 5€ on your first order
-            <input type="email"/>
+            <div class="text-container">
+                <span class="text">
+                    Join Our Newsletter! 
+                </span>
+                <span class="clr-accent focus">
+                    Save 5€ On Your First Order
+                </span>
+            </div>
+            <form>
+                <input placeholder="Email" type="email"/>
+                <input type="submit"/>
+            </form>
         </div>
     </footer>
 </body>
