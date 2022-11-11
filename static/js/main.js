@@ -30,3 +30,44 @@ document.getElementById("hero-section").addEventListener("mouseleave", () => {
 
     console.log("left")
 })
+
+
+
+
+//! ======== Counting up for the Stats ============
+
+
+const stats = document.querySelectorAll(".stat-count-number")
+
+
+console.log(stats)
+
+for (let i = 0; i < stats.length; i++) {
+    const numberContainer = stats[i]
+
+    const maxCount = parseInt(numberContainer.innerText);
+
+
+    let frame = 0;
+
+
+    const counter = setInterval(() => {
+        frame++
+        console.log("interval")
+
+        numberContainer.innerHTML = frame
+
+
+        if (frame == maxCount) {
+            clearInterval(counter)
+        }
+    }, 70)
+
+
+
+
+    // for(let j = 0; j <= maxCount; j++) {
+
+    // }
+
+}
