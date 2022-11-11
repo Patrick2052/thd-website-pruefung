@@ -5,11 +5,15 @@ const handleMouseMove = (e) => {
     
     const rect = target.getBoundingClientRect();
     
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const x = e.clientX - rect.width / 2;
+    const y = e.clientY - rect.height / 2;
 
     target.style.setProperty("--mouse-x", `${x/100}px`)
     target.style.setProperty("--mouse-y", `${y/100}px`)
+
+    // console.log(rect.width, rect.height)
+
+    console.log("x: " + x,"y: " + y)
 
 }
 
