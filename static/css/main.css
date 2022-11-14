@@ -78,6 +78,14 @@ html {
     background-color: var(--clr-bg-section-bright) !important;
 }
 
+.box-shadow-dark-1 {
+    box-shadow: 1px 1px 5px 1px rgba(34, 34, 34, 0.531);
+}
+.box-shadow-light-1 {
+    box-shadow: 1px 1px 2px 3px rgba(136, 136, 136, 0.531);
+
+}
+
 /*! -- HEADER -- */
 
 header {
