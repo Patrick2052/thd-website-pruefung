@@ -14,6 +14,8 @@
     --fnt-header-large: 40px;
     --fnt-test-medium: 16px;
 
+
+    --std-border-radius: 2px;
 }
 
 /*! -- OVERALL --*/
@@ -46,7 +48,9 @@ html {
     bottom: 0;
 }
 
-
+.img-container {
+    border-radius: var(--std-border-radius);
+}
 
 /*! -- UTILS --*/
 .clr-accent {
@@ -211,6 +215,8 @@ nav a:hover {
     background-color: var(--clr-accent);
     font-size: 25px;
 
+    border-radius: var(--std-border-radius);
+
     transition: 100ms ease-in-out;
 }
 
@@ -276,7 +282,8 @@ nav a:hover {
     /* min-height: 100px; */
     /* max-height: 200px; */
     /* height: 150px; */
-    min-height: 500px;
+    min-height: 300px;
+    padding: 100px 1em; 
     flex-wrap: wrap;
 }
 
@@ -417,6 +424,8 @@ nav a:hover {
     /* background-origin: center; */
     background-position: center;
     background-size: cover;
+
+    box-shadow: 1px 1px 4px 3px rgba(46, 46, 46, 0.342);
 }
 #section-1 img {
     height: 100%;
@@ -454,6 +463,9 @@ nav a:hover {
 
     height: 100%;
     width: 100%;
+
+    box-shadow: 1px 1px 4px 3px rgba(28, 28, 28, 0.717);
+
 }
 
 
