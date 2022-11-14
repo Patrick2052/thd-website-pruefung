@@ -53,7 +53,7 @@ for (let i = 0; i < stats.length; i++) {
 
     const counter = setInterval(() => {
         frame++
-        console.log("interval")
+        // console.log("interval")
 
         numberContainer.innerHTML = frame
 

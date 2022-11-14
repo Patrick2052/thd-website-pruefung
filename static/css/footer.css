@@ -6,9 +6,34 @@ footer {
     grid-template-columns: 2fr 1fr 2fr;
     justify-items: center;
     
-    padding: 3em 0;
+    padding: 3em 1em;
 
     color: rgb(179, 179, 179);
+}
+
+@media only screen and (max-width: 800px) {
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 50px;
+    }
+
+    footer .links {
+        width: 100%;
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    footer .socials {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        
+
+    }
 }
 
 .socials {
@@ -43,8 +68,36 @@ footer {
     font-weight: 600;
 }
 
+.newsletter-container .newsletter-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 
+.newsletter-container .icon {
+    height: 1.2em;
+    width: 1.2em;
+}
 
+.email-submit-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--clr-accent);
+    color: white;
+    padding: .5em 1.5em;
+    border-radius: var(--std-border-radius);
+}
+.email-submit-label:hover {
+    cursor: pointer;
+    background-color: white;
+    color: var(--clr-accent);
+    transition: 200ms ease-in-out;
+}
+/* .email-submit-label:hover .submit-text{
+    width: 0px;
+    overflow: hidden;
+} */
 
 .newsletter-container input {
     padding: .4em 1em;

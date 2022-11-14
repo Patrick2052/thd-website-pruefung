@@ -86,6 +86,27 @@ html {
 
 }
 
+
+/*! Animation for the underscores on hover*/
+@keyframes grow-inline {
+    0% {
+        width: 0px;
+    }
+    100%{
+
+        width: 100%;
+    }
+}
+
+
+.invisible {
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    position: absolute;
+    left: -10000px;
+}
+
 /*! -- HEADER -- */
 
 header {
@@ -376,7 +397,7 @@ nav a:hover {
     max-width: 70vw;
     height: 100%;
     min-height: 400px;
-    padding:1% 0;
+    padding:2em 0;
     gap: 50px;
 }
 
@@ -417,7 +438,26 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: 'Merriweather', serif;
+    font-family: 'Merriweather', serif; 
+    font-weight: 600;
+    width: max-content;
+    position: relative;
+}
+
+#section-1 .cta:hover .icon-arrow-right {
+    margin-left: 5px;
+}
+
+#section-1 .cta:hover::after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    background-color: var(--clr-accent);
+    width: 100%;
+    animation: 300ms grow-inline ;
+    cursor: pointer;
+    bottom: -2px;
+    border-radius: var(--std-border-radius);
 }
 
 /*Image classes*/
@@ -463,6 +503,52 @@ nav a:hover {
 #section-2 .text {
     color: rgb(193, 193, 193);
 }
+
+#section-2 .cta-section {
+    margin-top: 1em;
+}
+
+#section-2 .cta-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    position: relative;
+}
+
+#section-2 .cta-container:hover .icon-arrow-right {
+    margin-left: 5px;
+}
+
+#section-2 .cta-container:hover::after{
+    content: "";
+    height: 2px;
+    position: absolute;
+    background-color: var(--clr-accent);
+    width: 100%;
+    animation: 300ms grow-inline ;
+    cursor: pointer;
+    bottom: -2px;
+    border-radius: var(--std-border-radius);
+}
+
+#section-2 .cta-container > .icon-arrow-right {
+    height: 1.7em;
+    width: 1.7em;
+}
+
+#section-2 .cta {
+    /* background-color: var(--clr-accent); */
+    /* padding: .5em 1.5em; */
+    border-radius: var(--std-border-radius);
+    font-size: 20px;
+    font-weight: 600;
+}
+/* #section-2 .cta:hover {
+    transition: 100ms ease-in-out;
+    /* background-color: white; */
+    /* color: var(--clr-accent) */
+
 
 #section-2 .img-container {
     background-image: url(../pictures/bar.jpg);

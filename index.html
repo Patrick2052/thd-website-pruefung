@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./static/css/footer.css"/>
 
     <script src="./static/js/main.js" defer></script>
+    <script src="./static/js/newsletterFormSubmit.js" defer></script>
 </head>
 <body>
     <span id="jump-to-top">
@@ -31,19 +32,19 @@
             <nav>
                 <ul>
                     <li>
-                        <a>Reviews</a>
+                        <a href="./menu.html">
+                            Menu
+                        </a>
                     </li>
                     <li>
                         <a href="./order-online.html">Order Online</a>
                     </li>
+                    <!-- <li>
+                        <a>Reviews</a>
+                    </li> -->
                     <li>
                         <a>
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            Menu
+                            Pictures
                         </a>
                     </li>
                 </ul>
@@ -188,22 +189,14 @@
                             so blinded by desire, that they cannot foresee the pain and trouble that are 
                             bound to ensue; and equal blame belongs to those who fail in their duty</p>
                     
-                        <!-- <div class="stats">
-                            <div class="single-stat">
-                                <span class="number-container">
-                                    <span class="number stat-count-number">17</span>
-                                    <span class="clr-accent">+</span>
-                                </span>
-                                <span>Years Of Experience</span>
-                            </div>
-                            <div class="single-stat">
-                                <span class="number-container">
-                                    <span class="number stat-count-number">32</span>
-                                    <span class="clr-accent">+</span>
-                                </span>
-                                <span>Acclaimed Dishes</span>
-                            </div>
-                        </div> -->
+                        <div class="cta-section">
+                            <a class="cta-container">
+                                <span class="cta">See Pictures</span>
+                                <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path fill="currentcolor" stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
                
@@ -235,16 +228,16 @@
                 <img loading="lazy" src="./static/pictures/logos/whatsapp.svg"/>
             </li>
         </ul>
-        <ul>
+        <ul class="links">
             <li>
-                <a>Reviews</a>
+                <a>Pictures</a>
             </li>
             <li>
                 <a>Order Online</a>
             </li>
-            <li>
-                <a>About Us</a>
-            </li>
+            <!-- <li> -->
+                <!-- <a>About Us</a> -->
+            <!-- </li> -->
             <li>
                 <a>Menu</a>
             </li>
@@ -258,9 +251,17 @@
                     Save 5€ On Your First Order
                 </span>
             </div>
-            <form>
-                <input placeholder="Email" type="email"/>
-                <input type="submit"/>
+            <form class="newsletter-form" id="newsletter-form">
+                <input  name="email" placeholder="Email" type="email" required/>
+                <label class="email-submit-label" for="email-submit">
+                        <span class="submit-text">
+                            Join
+                        </span>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>                      
+                </label>
+                <input class="invisible" id="email-submit" type="submit"/>
             </form>
         </div>
     </footer>
