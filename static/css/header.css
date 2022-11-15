@@ -1,0 +1,90 @@
+:root {
+    --header-height: 60px;
+    --header-gap: 2em;
+
+    /*? color */
+    --clr-accent: #8E4706;
+
+    --clr-bg-section-bright: rgb(238, 238, 231);
+    --clr-bg-section-dark: #1A1D1A;
+
+    --fnt-header-sml: 27px;
+    --fnt-header-large: 40px;
+    --fnt-test-medium: 16px;
+
+
+    --std-border-radius: 2px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    padding: 1em 1em;
+    position: absolute;
+    width: 100%;
+
+    top: 0;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+header .logo {
+    height: 40px;
+    width: 35px;
+    color: var(--clr-accent)
+}
+
+
+.header-part-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--header-gap);
+
+    color: rgba(234, 234, 234, 0.823);
+}
+
+nav a:visited {
+    color: white;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--header-gap);
+}
+
+nav a:hover {
+    color: white;
+    transition: 200ms ease-in-out;
+}
+
+.phone-number-container {
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.phone-number-container:hover {cursor: pointer;}
+
+.phone-number-container > .phone-icon {
+    height: 1.2em;
+    width: 1.2em;
+}
+
+.shopping-cart-container {
+    color: inherit;
+    height: 20px;
+    width: 20px;
+}

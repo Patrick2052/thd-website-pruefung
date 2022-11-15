@@ -1,0 +1,17 @@
+:root {
+    --header-height: 60px;
+    --header-gap: 2em;
+
+    /*? color */
+    --clr-accent: #8E4706;
+
+    --clr-bg-section-bright: rgb(238, 238, 231);
+    --clr-bg-section-dark: #1A1D1A;
+
+    --fnt-header-sml: 27px;
+    --fnt-header-large: 40px;
+    --fnt-test-medium: 16px;
+
+
+    --std-border-radius: 2px;
+}

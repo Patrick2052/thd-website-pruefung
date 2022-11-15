@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./static/css/reset.css"/>
     <link rel="stylesheet" href="./static/css/main.css"/>
     <link rel="stylesheet" href="./static/css/footer.css"/>
+    <link rel="stylesheet" href="./static/css/header.css"/>
+    <link rel="stylesheet" href="./static/css/variables.css"/>
 
     <script src="./static/js/main.js" defer></script>
     <script src="./static/js/newsletterFormSubmit.js" defer></script>
@@ -19,15 +21,17 @@
         <button>sml arrow up</button>
     </span>
     <header>
-        <div class="logo-container">
-            <svg class="logo" width="99" height="85" viewBox="0 0 99 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="99" height="85" fill="none"/>
-                <path fill="currentcolor" d="M55.9998 19.2204V44.2017C59.5998 42.9812 62.3997 37.7561 62.3997 31.7111C62.3997 25.6648 59.5998 20.4396 55.9998 19.2198V19.2204Z" fill="black"/>
-                <path fill="currentcolor" d="M75.1998 3H9.6C8.71715 3 8 3.71493 8 4.59506V81.1578C8 82.0401 8.71715 82.7529 9.6 82.7529H75.1998V3ZM43.1999 30.116C43.1999 35.7308 39.0193 40.377 33.5999 41.1539V71.5876C33.5999 72.4699 32.8828 73.1827 31.9999 73.1827C31.1171 73.1827 30.3999 72.4699 30.3999 71.5876V41.1539C24.9806 40.3771 20.8 35.7308 20.8 30.116V17.3555C20.8 16.4754 21.5171 15.7605 22.4 15.7605C23.2828 15.7605 24 16.4754 24 17.3555V30.116C24 33.9684 26.7536 37.1884 30.3999 37.9303V17.355C30.3999 16.4748 31.1171 15.7599 31.9999 15.7599C32.8828 15.7599 33.5999 16.4748 33.5999 17.355V37.9303C37.2463 37.1883 39.9999 33.9684 39.9999 30.116V17.3555C39.9999 16.4754 40.7171 15.7605 41.5999 15.7605C42.4828 15.7605 43.1999 16.4754 43.1999 17.3555V30.116ZM55.9999 47.4879V71.5869C55.9999 72.4692 55.2849 73.182 54.3999 73.182C53.5149 73.182 52.7999 72.4692 52.7999 71.5869V17.355C52.7999 16.4748 53.5149 15.7599 54.3999 15.7599C60.6799 15.7599 65.5998 22.7669 65.5998 31.7105C65.5998 39.8774 61.4942 46.4107 55.9999 47.4873V47.4879Z" fill="black"/>
-                <path fill="currentcolor" d="M86.4001 6.19012H78.4001V76.3726H86.4001C87.2851 76.3726 88.0001 75.6598 88.0001 74.7776V7.78518C88.0001 6.90506 87.2851 6.19012 86.4001 6.19012Z" fill="black"/>
-            </svg>            
-            <span>DELICIOSO</span>
-        </div>
+        <a href="./index.html">
+            <div class="logo-container">
+                <svg class="logo" width="99" height="85" viewBox="0 0 99 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="99" height="85" fill="none"/>
+                    <path fill="currentcolor" d="M55.9998 19.2204V44.2017C59.5998 42.9812 62.3997 37.7561 62.3997 31.7111C62.3997 25.6648 59.5998 20.4396 55.9998 19.2198V19.2204Z" fill="black"/>
+                    <path fill="currentcolor" d="M75.1998 3H9.6C8.71715 3 8 3.71493 8 4.59506V81.1578C8 82.0401 8.71715 82.7529 9.6 82.7529H75.1998V3ZM43.1999 30.116C43.1999 35.7308 39.0193 40.377 33.5999 41.1539V71.5876C33.5999 72.4699 32.8828 73.1827 31.9999 73.1827C31.1171 73.1827 30.3999 72.4699 30.3999 71.5876V41.1539C24.9806 40.3771 20.8 35.7308 20.8 30.116V17.3555C20.8 16.4754 21.5171 15.7605 22.4 15.7605C23.2828 15.7605 24 16.4754 24 17.3555V30.116C24 33.9684 26.7536 37.1884 30.3999 37.9303V17.355C30.3999 16.4748 31.1171 15.7599 31.9999 15.7599C32.8828 15.7599 33.5999 16.4748 33.5999 17.355V37.9303C37.2463 37.1883 39.9999 33.9684 39.9999 30.116V17.3555C39.9999 16.4754 40.7171 15.7605 41.5999 15.7605C42.4828 15.7605 43.1999 16.4754 43.1999 17.3555V30.116ZM55.9999 47.4879V71.5869C55.9999 72.4692 55.2849 73.182 54.3999 73.182C53.5149 73.182 52.7999 72.4692 52.7999 71.5869V17.355C52.7999 16.4748 53.5149 15.7599 54.3999 15.7599C60.6799 15.7599 65.5998 22.7669 65.5998 31.7105C65.5998 39.8774 61.4942 46.4107 55.9999 47.4873V47.4879Z" fill="black"/>
+                    <path fill="currentcolor" d="M86.4001 6.19012H78.4001V76.3726H86.4001C87.2851 76.3726 88.0001 75.6598 88.0001 74.7776V7.78518C88.0001 6.90506 87.2851 6.19012 86.4001 6.19012Z" fill="black"/>
+                </svg>            
+                <span>DELICIOSO</span>
+            </div>
+        </a>
         <div class="header-part-2">
             <nav>
                 <ul>
@@ -43,7 +47,7 @@
                         <a>Reviews</a>
                     </li> -->
                     <li>
-                        <a>
+                        <a href="./picture-gallery.html">
                             Pictures
                         </a>
                     </li>
@@ -79,7 +83,7 @@
                 </div>
                 
                 <div class="hero-actions-container">
-                    <a class="hero-cta box-shadow-dark-1">Book Now</a>
+                    <a href="./booking.html" class="hero-cta box-shadow-dark-1">Book Now</a>
                     <a class="hero-secondary-cta">
                         <span>
                             Our Menu
@@ -190,7 +194,7 @@
                             bound to ensue; and equal blame belongs to those who fail in their duty</p>
                     
                         <div class="cta-section">
-                            <a class="cta-container">
+                            <a href="./picture-gallery.html" class="cta-container">
                                 <span class="cta">See Pictures</span>
                                 <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path fill="currentcolor" stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
