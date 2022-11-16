@@ -98,7 +98,33 @@ footer {
     width: 0px;
     overflow: hidden;
 } */
+@keyframes shake {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    
+    33% {
+        transform: rotateZ(3deg);
+    }
+    
+    66% {
+        transform: rotateZ(-3deg);   
+    }
+    
+    100% {
+        transform: rotateZ(0deg);
+    }
+ 
+}
+
+
 
 .newsletter-container input {
     padding: .4em 1em;
+
+}
+
+.newsletter-container .shake {
+    transition: ease-in-out;
+    animation: 500ms shake;
 }

@@ -15,6 +15,7 @@
 
     <script src="./static/js/main.js" defer></script>
     <script src="./static/js/newsletterFormSubmit.js" defer></script>
+    <script src="./static/js/footer.js" defer></script>
 </head>
 <body>
     <span id="jump-to-top">
@@ -139,8 +140,10 @@
                         </div>
                     </div>
                 </div>
-                <div loading="lazy" class="img-container">
-                    <!-- <img src="./static/pictures/egg-toast.jpg" class="section-img"/> -->
+                <div class="img-container-container">
+                    <div loading="lazy" class="img-container">
+                        <!-- <img src="./static/pictures/egg-toast.jpg" class="section-img"/> -->
+                    </div>
                 </div>
             </div>
             
@@ -153,23 +156,23 @@
         <section id="known-from">
             <div class="header-sml">Known From</div>
             <ul>
-                <li>
-                    <img loading="lazy" src="./static/pictures/logos/lieferando-de-logo.svg"
+                <li class="known-logo-container">
+                    <img class="known-logo" loading="lazy" src="./static/pictures/logos/lieferando-de-logo.svg"
                     alt="lieferando logo grey"
                     />
                 </li>
-                <li>
-                    <img loading="lazy" src="./static/pictures/logos/food-and-wine-logo-vector.svg"
+                <li class="known-logo-container">
+                    <img class="known-logo" loading="lazy" src="./static/pictures/logos/food-and-wine-logo-vector.svg"
                     alt="food and wine logo"
                     />
                 </li>
-                <li>
-                    <img loading="lazy" src="./static/pictures/logos/Frankfurter_Allgemeine_logo.svg"
+                <li class="known-logo-container">
+                    <img class="known-logo" loading="lazy" src="./static/pictures/logos/Frankfurter_Allgemeine_logo.svg"
                     alt="Frankfurter Allgemeine Zeitung Logo"
                     />
                 </li>
-                <li>
-                    <img loading="lazy" src="./static/pictures/logos/lifestyle-food.svg"
+                <li class="known-logo-container">
+                    <img class="known-logo" loading="lazy" src="./static/pictures/logos/lifestyle-food.svg"
                     alt="Lifestyle food logo"
                     />
                 </li>
@@ -179,11 +182,11 @@
 
         <section id="section-2" class="double-section">
             <div class="content">
-                <div class="img-container">
+                <div class="img-container" id="section-2-img-container">
                     <!-- <img src="./static/pictures/egg-toast.jpg" class="section-img"/> -->
                 </div>
                 <div>
-                    <div class="text-container">
+                    <div class="text-container" id="section-2-text-container">
                         <div class="headers">
                             <span class="topic header-small">Atmosphere</span>
                             <h3 class="header header-large clr-accent">A Location Like No Other</h3>
@@ -220,7 +223,7 @@
 
        
     </main>
-    <footer>
+    <footer id="footer">
         <ul class="socials">
             <li>
                 <img loading="lazy" src="./static/pictures/logos/facebook.svg"/>
@@ -247,7 +250,7 @@
             </li>
         </ul>
         <div class="newsletter-container">
-            <div class="text-container">
+            <div class="text-container" id="newsletter-text-container">
                 <span class="text">
                     Join Our Newsletter! 
                 </span>
