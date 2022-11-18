@@ -186,7 +186,7 @@ nav a:hover {
 /*! -- MAIN --*/
 
 #hero-section {
-    color: white;
+    color: var(--clr-bg-section-bright);
     padding-top: var(--header-height);
     min-height: calc(50vh + var(--header-height));
 
@@ -295,10 +295,14 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 #known-from > .header-sml {
     padding: .4em;
     padding-bottom: 0;
+    position: absolute;
+    top: 1px;
+
 }
 #known-from > ul {
     /* width: 100%; */
@@ -320,7 +324,7 @@ nav a:hover {
     height: 100%;
     max-height: 100px;
     max-width: 500px;
-    position: relative;
+    /* position: absolute; */
     /* overflow: hidden; */
     /* flex-shrink: 2; */
 }
@@ -330,8 +334,7 @@ nav a:hover {
     max-height: 100%;
     max-width: 100%;
     height: 5vw;
-    width: min-content;
-
+    width: 100%;
 }
 
 @keyframes logo-fly-in {
@@ -659,6 +662,7 @@ nav a:hover {
     /*! known-from */
     #known-from > ul > li > img {
         height: 10vw;
+        width: 100%;
     }
 
 
