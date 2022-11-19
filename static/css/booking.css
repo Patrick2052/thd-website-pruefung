@@ -1,6 +1,71 @@
-
-
 main {
     height: 100%;
     padding-top: var(--header-height);
+   
+}
+
+.booking-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.booking-card {
+    /* background-color: var(--clr-bg-section-bright); */
+    color: var(--clr-accent);
+    padding: 1em;
+    border-radius: 5px;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    /* border: 2px solid #FEF6C9; */
+}
+
+.booking-card .subtitle {
+    background-color: white;
+    padding: 5px;
+    color: black;
+    font-family: 'Merriweather', serif;;
+
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.booking-form .form-field{
+    padding: .5em 1em;
+    font-size: 20px;
+    /* border-radius: var(--std-border-radius); */
+    background-color: white;
+    flex-grow: 1;
+}
+
+.booking-form section.name {
+    display: flex;
+    gap: 10px;
+}
+
+.booking-form input[type=submit] {
+    background-color: var(--clr-accent);
+    color: white;
+    padding: 1em;
+    text-align:center ;
+}
+.booking-form input[type=submit]:hover {
+    cursor: pointer;
+    background-color: white;
+    color: var(--clr-accent)
+}
+
+
+
+
+
+.red {
+    background-color: red;
 }

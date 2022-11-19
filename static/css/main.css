@@ -538,9 +538,11 @@ nav a:hover {
 @keyframes section-2-fly-in {
     from {
         transform: translateY(50%);
+        opacity: 0;
     }
     to {
         transform: translateY(0);
+        opacity: 100;
     }
 }
 

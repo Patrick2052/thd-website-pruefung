@@ -37,3 +37,7 @@ img {
     max-height: 100%;
 
 }
+
+input {
+    all: unset;
+}

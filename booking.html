@@ -61,20 +61,33 @@
         </div>
     </header>
     <main>
-
         <div class="booking-container">
-            <h1>Booking</h1>
+            
+            <div class="booking-card">
+                <section>
+                    <!-- <h1>Booking</h1> -->
 
-            <form>
-                <input type="text" placeholder="name"/>
-                <input type="date"/>
-                <input type="submit"/>
-            </form>
+                    <div>
+                        <h2>Opening Times</h2>
+                        
+                    </div>
+                </section>
+                <form class="booking-form">
+                    <section class="name">
+                        <input class="form-field" type="text" placeholder="First Name" name="first-name"/>
+                        <input class="form-field" type="text" placeholder="Last Name" name="last-name"/>
+                    </section>
+                    <input class="form-field" type="date" placeholder="Date: dd.mm.yyyy" name="date"/>
+                    <input class="form-field" type="time" name="time"/>
+                    <input class="form-field" type="number" name="number-people"/>
+                    <input type="submit"/>
+                </form>
+            </div>
+            
         </div>
-
     </main>
-
+<!-- 
     <a href="./index.html">back to home</a>
-    <h1>booking</h1>
+    <h1>booking</h1> -->
 </body>
 </html>

@@ -11,6 +11,8 @@ footer {
     color: rgb(179, 179, 179);
 }
 
+
+/*! media query for the footer*/
 @media only screen and (max-width: 800px) {
     footer {
         display: flex;
@@ -36,6 +38,8 @@ footer {
     }
 }
 
+/*SOCIALS*/
+
 .socials {
     display: flex;
     flex-direction: row;
@@ -46,19 +50,40 @@ footer {
     min-height: 20px;
     height: 4vw;
 }
+/*SOCIALS END*/
 
-.socials
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.links a {
+    transition: 200ms ease-in-out;
+}
+
+.links a:hover {
+    color: white;
+}
 
 
+
+
+
+
+/*NEWSLETTER*/
 .newsletter-container {
     display: flex;
     flex-direction: column;
-    gap: .5em;
+    gap: 5px;
 }
 
 .newsletter-container .text-container {
     display: flex;
     flex-direction: column;
+    gap: 1px;
 }
 
 .newsletter-container .text-container .text {
@@ -80,6 +105,11 @@ footer {
     height: 1.2em;
     width: 1.2em;
 }
+
+.newsletter-container input[type=email] {
+    background-color: white;
+}
+
 
 .email-submit-label {
     display: flex;
@@ -116,17 +146,18 @@ footer {
     100% {
         transform: rotateZ(0deg);
     }
- 
+    
 }
 
 
 
 .newsletter-container input {
     padding: .4em 1em;
-
+    
 }
 
 .newsletter-container .shake {
     transition: ease-in-out;
     animation: 500ms shake;
 }
+/*NEWSLETTER END*/
