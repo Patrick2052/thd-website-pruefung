@@ -78,6 +78,8 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    overflow: hidden;
+    position: relative;
 }
 
 .newsletter-container .text-container {

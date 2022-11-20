@@ -84,7 +84,7 @@
                 </div>
                 
                 <div class="hero-actions-container">
-                    <a href="./booking.html" class="hero-cta box-shadow-dark-1">Book Now</a>
+                    <a href="#section-booking" class="hero-cta box-shadow-dark-1">Book Now</a>
                     <a class="hero-secondary-cta">
                         <span>
                             Our Menu
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         <div>
-                            <a class="cta">
+                            <a class="cta" href="">
                                 <span>
                                     Order Now
                                 </span>
@@ -220,15 +220,48 @@
         </section>
 
 
-        <!-- <section id="section-2">
-            <div class="one">
-                <span class="img-container"></span>
-            </div>
-            <div class="two">
+        <section id="section-booking" class="double-section">
+            <div  class="content">
+                <div>
+                    <form class="booking-form">
+                        <section class="name">
+                            <input class="form-field" type="text" placeholder="First Name" name="first-name"/>
+                            <input class="form-field" type="text" placeholder="Last Name" name="last-name"/>
+                        </section>
+                        <input class="form-field" type="date" placeholder="Date: dd.mm.yyyy" name="date"/>
+                        <input class="form-field" type="time" name="time"/>
+                        
+                        <section>
+                            <!-- <span class="radio-container">
+                            </span> -->
+                            <label for="radio-one">
+                                <input id="radio-one" type="radio" name="1" value="one"/>
+                                radio
+                            </label>
+                            <label for="radio-two">
+                                <input id="radio-two" type="radio" name="1" value="one"/>
+                                radio checked
+                            </label>
 
-            </div>
-        </section> -->
+                            <!-- <label for="radio-two">
+                                Two
+                            </label>
+                            <input id="radio-two" type="radio" name="2" value="two"/>
+                            
+                            <label for="radio-custom">
+                                custom
+                            </label>
+                            <input id="radio-custom" type="radio" name="4" value="custom"/> -->
+                        </section>
 
+                        <input type="submit"/>
+                    </form>
+                </div>
+                <div>
+                    <h1>booking</h1>
+                </div>
+            </div>
+        </section>
        
     </main>
     <footer id="footer">
@@ -276,7 +309,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                         </svg>                      
                 </label>
-                <input class="invisible" id="email-submit" type="submit"/>
+                <input style="opacity: 0; position: absolute; left: 1000px" class="invisible" id="email-submit" type="submit"/>
             </form>
         </div>
     </footer>
