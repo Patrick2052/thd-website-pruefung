@@ -38,6 +38,7 @@ html {
     /* scrollbar-: white; */
     scrollbar-width: thin;
     position: relative;
+    scroll-behavior: smooth;
 }
 
 
@@ -186,7 +187,7 @@ nav a:hover {
 /*! -- MAIN --*/
 
 #hero-section {
-    color: white;
+    color: var(--clr-bg-section-bright);
     padding-top: var(--header-height);
     min-height: calc(50vh + var(--header-height));
 
@@ -295,10 +296,14 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 #known-from > .header-sml {
     padding: .4em;
     padding-bottom: 0;
+    position: absolute;
+    top: 1px;
+
 }
 #known-from > ul {
     /* width: 100%; */
@@ -320,7 +325,7 @@ nav a:hover {
     height: 100%;
     max-height: 100px;
     max-width: 500px;
-    position: relative;
+    /* position: absolute; */
     /* overflow: hidden; */
     /* flex-shrink: 2; */
 }
@@ -330,8 +335,7 @@ nav a:hover {
     max-height: 100%;
     max-width: 100%;
     height: 5vw;
-    width: min-content;
-
+    width: 100%;
 }
 
 @keyframes logo-fly-in {
@@ -530,21 +534,25 @@ nav a:hover {
 
     display: grid;
     grid-template-columns: 1fr 1fr; */
+    overflow: hidden;
+    padding: 1em 0;
 }
 
 @keyframes section-2-fly-in {
     from {
         transform: translateY(50%);
+        opacity: 0;
     }
     to {
         transform: translateY(0);
+        opacity: 100;
     }
 }
 
 #section-2 .fly-in {
     /* background-color: red; */
 
-    animation: 1200ms section-2-fly-in;
+    animation: 1700ms section-2-fly-in;
 
 }
 
@@ -620,6 +628,62 @@ nav a:hover {
 }
 
 
+#section-booking {
+    min-height: 500px;
+}
+
+
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-form .name {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.booking-form input[type=submit] {
+    padding: 1em;
+    background-color: var(--clr-accent);
+    color: white;
+}
+
+/*! radio button custom styling*/
+/* https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */
+
+
+/* #section-booking .booking-form input[type=radio] {
+    appearance: none;
+    position: relative;
+    padding-left: 1em;
+} */
+
+
+
+
+
+
+
+/* #section-booking .booking-form input[type=radio]::before {
+    content: "";
+    height: 1em;
+    width: 1em;
+    background-color: red;
+    position: absolute;
+    left: -100%;
+} */
+
+
+
+
+
+
+
+
+
 
 
 .filler {
@@ -632,6 +696,14 @@ nav a:hover {
 
 
 /*! -- MEDIA QUERIES -- */
+@media only screen and (max-width: 1000px) {
+
+    #section-booking .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
 
 
 @media only screen and (max-width: 850px) {
@@ -640,6 +712,8 @@ nav a:hover {
         height: 30vh;
     }
 
+ 
+    
 }
 
 @media only screen and (max-width: 750px) {
@@ -659,6 +733,7 @@ nav a:hover {
     /*! known-from */
     #known-from > ul > li > img {
         height: 10vw;
+        width: 100%;
     }
 
 
@@ -680,6 +755,9 @@ nav a:hover {
         margin-left: 500px;
     }
     
+
+ 
+
 
 }
 

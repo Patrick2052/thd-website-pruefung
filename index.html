@@ -58,9 +58,9 @@
                 <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                 </svg>
-                <span class="phone-number">
+                <a href="tel:01701750429" class="phone-number">
                     0170 1750429
-                </span> 
+                </a> 
             </span>
                 
             <a class="shopping-cart-container">
@@ -84,7 +84,7 @@
                 </div>
                 
                 <div class="hero-actions-container">
-                    <a href="./booking.html" class="hero-cta box-shadow-dark-1">Book Now</a>
+                    <a href="#section-booking" class="hero-cta box-shadow-dark-1">Book Now</a>
                     <a class="hero-secondary-cta">
                         <span>
                             Our Menu
@@ -107,11 +107,17 @@
                             <span class="topic header-small">Quality</span>
                             <h3 class="header header-large clr-accent">Great Food That Excites</h3>
                         </div>
-                        <p>On the other hand, we denounce with righteous indignation and dislike men 
+                        <!-- <p>On the other hand, we denounce with righteous indignation and dislike men 
                             who are so beguiled and demoralized by the charms of pleasure of the moment, 
                             so blinded by desire, that they cannot foresee the pain and trouble that are 
-                            bound to ensue; and equal blame belongs to those who fail in their duty</p>
-                    
+                            bound to ensue; and equal blame belongs to those who fail in their duty</p> -->
+                            <p>
+                                Every day we strive to produce the best meals on the market. We source our ingredients from local farmers and put special care on hygene and ethics.
+                            </p>
+                            <p>
+                                Order now and experience it yourself!
+                            </p>
+
                         <div class="stats">
                             <div class="single-stat">
                                 <span class="number-container">
@@ -129,7 +135,7 @@
                             </div>
                         </div>
                         <div>
-                            <a class="cta">
+                            <a class="cta" href="">
                                 <span>
                                     Order Now
                                 </span>
@@ -154,7 +160,7 @@
         
         
         <section id="known-from">
-            <div class="header-sml">Known From</div>
+            <i class="header-sml">Known From</i>
             <ul>
                 <li class="known-logo-container">
                     <img class="known-logo" loading="lazy" src="./static/pictures/logos/lieferando-de-logo.svg"
@@ -191,14 +197,16 @@
                             <span class="topic header-small">Atmosphere</span>
                             <h3 class="header header-large clr-accent">A Location Like No Other</h3>
                         </div>
-                        <p class="text">On the other hand, we denounce with righteous indignation and dislike men 
-                            who are so beguiled and demoralized by the charms of pleasure of the moment, 
-                            so blinded by desire, that they cannot foresee the pain and trouble that are 
-                            bound to ensue; and equal blame belongs to those who fail in their duty</p>
+                        <p class="text">
+                            Our venue focuses primarily on making you feel right at home when you decide to spend a part of your day here. Always bright and always clean with great service by our award winning staff.
+                        </p>
+                        <p class="text">
+                            In you can spend cozy afternoons in our lounge, have a seasonal beverage at our bar or explore our various other choices.
+                        </p>
                     
                         <div class="cta-section">
                             <a href="./picture-gallery.html" class="cta-container">
-                                <span class="cta">See Pictures</span>
+                                <span class="cta">Have a look around</span>
                                 <svg class="icon-arrow-right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path fill="currentcolor" stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                                 </svg>
@@ -212,15 +220,48 @@
         </section>
 
 
-        <!-- <section id="section-2">
-            <div class="one">
-                <span class="img-container"></span>
-            </div>
-            <div class="two">
+        <section id="section-booking" class="double-section">
+            <div  class="content">
+                <div>
+                    <form class="booking-form">
+                        <section class="name">
+                            <input class="form-field" type="text" placeholder="First Name" name="first-name"/>
+                            <input class="form-field" type="text" placeholder="Last Name" name="last-name"/>
+                        </section>
+                        <input class="form-field" type="date" placeholder="Date: dd.mm.yyyy" name="date"/>
+                        <input class="form-field" type="time" name="time"/>
+                        
+                        <section>
+                            <!-- <span class="radio-container">
+                            </span> -->
+                            <label for="radio-one">
+                                <input id="radio-one" type="radio" name="1" value="one"/>
+                                radio
+                            </label>
+                            <label for="radio-two">
+                                <input id="radio-two" type="radio" name="1" value="one"/>
+                                radio checked
+                            </label>
 
-            </div>
-        </section> -->
+                            <!-- <label for="radio-two">
+                                Two
+                            </label>
+                            <input id="radio-two" type="radio" name="2" value="two"/>
+                            
+                            <label for="radio-custom">
+                                custom
+                            </label>
+                            <input id="radio-custom" type="radio" name="4" value="custom"/> -->
+                        </section>
 
+                        <input type="submit"/>
+                    </form>
+                </div>
+                <div>
+                    <h1>booking</h1>
+                </div>
+            </div>
+        </section>
        
     </main>
     <footer id="footer">
@@ -268,7 +309,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                         </svg>                      
                 </label>
-                <input class="invisible" id="email-submit" type="submit"/>
+                <input style="opacity: 0; position: absolute; left: 1000px" class="invisible" id="email-submit" type="submit"/>
             </form>
         </div>
     </footer>
