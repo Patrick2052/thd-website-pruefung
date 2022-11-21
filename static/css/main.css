@@ -544,7 +544,7 @@ nav a:hover {
 #section-2 .fly-in {
     /* background-color: red; */
 
-    animation: 2000ms section-2-fly-in;
+    animation: 1200ms section-2-fly-in;
 
 }
 
