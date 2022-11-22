@@ -643,7 +643,7 @@ nav a:hover {
     flex-direction: row;
     gap: 50px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 

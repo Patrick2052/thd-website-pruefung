@@ -73,9 +73,48 @@ function ObserverSection2() {
 }
 
 
+//! handling the booking form on the bottom of the main page
+const bookingForm = document.getElementById("booking-form");
+const bookingFormSubmit = bookingForm.querySelector("input[type=submit]")
+
 // function BookingSectionRadio() {
 //     document.getElementById
 // }
+function updateSubmitText() {
+    //type can be date / time / people 
+    let date = dateField.value;
+    let time = timeField.value;
+    let amount = 0;
+
+    const template = `Book now for ${date} | ${time} (${amount})`
+
+    bookingFormSubmit.value = template;
+}
+
+const dateField = bookingForm.querySelector("input[type=date]")
+const timeField = bookingForm.querySelector("input[type=time]")
+
+dateField.addEventListener("change", (e) => {
+    updateSubmitText();
+})
+
+timeField.addEventListener("change", (e) => {
+    console.log(e.target.value)
+    updateSubmitText();
+})
+
+
+bookingForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    handleBookingSubmit(e);
+})
+function handleBookingSubmit(e) {
+
+
+    confirm(`Please confirm your reservation: ${dateField.value} -- ${timeField.value} -- ${"TODO"} people`)
+}
+
+
 
 
 

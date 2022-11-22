@@ -229,13 +229,13 @@
                     <p>! Please be aware that we are only allowed to serve alcoholic beverages to people 21 and over</p>
                 </div>
                 <div>
-                    <form class="booking-form">
+                    <form class="booking-form" id="booking-form">
                         <section class="name">
                             <input class="form-field" type="text" placeholder="First Name" name="first-name"/>
-                            <input class="form-field" type="text" placeholder="Last Name" name="last-name"/>
+                            <input class="form-field" type="text" placeholder="Last Name" name="last-name"/ required>
                         </section>
-                        <input class="form-field" type="date" placeholder="Date: dd.mm.yyyy" name="date"/>
-                        <input class="form-field" type="time" name="time"/>
+                        <input class="form-field" type="date" placeholder="Date: dd.mm.yyyy" name="date"/ required>
+                        <input class="form-field" type="time" name="time"/ required>
                         
                         <!-- <div> -->
                             <!-- <span class="radio-container">
@@ -256,7 +256,7 @@
                             </div>
                             <input class="form-field" type="phone" name="phone" placeholder="contact"/>
 
-                        <input type="submit" value="Book now for Nov 22 19:00pm"/>
+                        <input type="submit" value="Book now"/>
                     </form>
                 </div>
                 
