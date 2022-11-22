@@ -630,25 +630,55 @@ nav a:hover {
 
 #section-booking {
     min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    /* background-color: var(--clr-bg-section-bright); */
 }
 
+#section-booking .content {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 
 .booking-form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+}
+
+.booking-form .form-field {
+    padding: .3em;
+    background-color: var(--clr-bg-section-bright);
 }
 
 .booking-form .name {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .booking-form input[type=submit] {
     padding: 1em;
     background-color: var(--clr-accent);
     color: white;
+    border-radius: var(--std-border-radius);
+    transition: 200ms ease-in-out;
+}
+.booking-form input[type=submit]:hover {
+
+    cursor: pointer;
+    background-color: white;
+    color: var(--clr-accent);
 }
 
 /*! radio button custom styling*/
@@ -696,14 +726,14 @@ nav a:hover {
 
 
 /*! -- MEDIA QUERIES -- */
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 1000px) {
 
     #section-booking .content {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
-}
+} */
 
 
 @media only screen and (max-width: 850px) {
