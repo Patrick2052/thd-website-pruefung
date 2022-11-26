@@ -8,8 +8,11 @@
 
 
     <link rel="stylesheet" href="./static/css/header.css"/>
-    <link rel="stylesheet" href="./static/css/picture-gallery.css"/>
     <link rel="stylesheet" href="./static/css/reset.css"/>
+    <link rel="stylesheet" href="./static/css/variables.css"/>
+    <link rel="stylesheet" href="./static/css/picture-gallery.css"/>
+
+    <script src="./static/js/picture-gallery.js" defer></script>
 </head>
 <body>
     <header>
@@ -63,13 +66,91 @@
     </header>
     <main>
         <section class="test-gallery">
-            <img src="./static/pictures/bundo-kim-Pb9bUzH1nD8-unsplash.jpg"/>  
-            <img src="./static/pictures/chris-liverani-oCsaxvGCehM-unsplash.jpg"/>  
-            <img src="./static/pictures/egg-toast.jpg"/>  
-            <img src="./static/pictures/jonathan-borba-uB7q7aipU2o-unsplash.jpg"/>  
-            <img src="./static/pictures/piotr-szulawski-DCmUhk54F6M-unsplash.jpg"/>  
-            <img src="./static/pictures/sebastian-coman-photography-eBmyH7oO5wY-unsplash.jpg"/>  
-            <img src="./static/pictures/restaurant-interior-1.jpg"/>  
+            <div class="header-container">
+                <h1>What we offer:</h1>
+            </div>
+            <ul id="gallery-list" class="gallery-list">
+                <li>
+                    <img class="gallery-img" src="./static/pictures/bundo-kim-Pb9bUzH1nD8-unsplash.jpg" 
+                    loading="lazy"
+                    alt="A view on the street from inside our restaurant"
+                    />
+                    <div class="img-text">Great Atmosphere</div>  
+                </li>
+                <li>
+                    <img class="gallery-img" src="./static/pictures/egg-toast.jpg" 
+                    loading="lazy"
+                    alt="eggs on toast with salad and avocado"
+                    />  
+                    <div class="img-text">Great Food</div>  
+                </li>
+                <li>
+                    <img class="gallery-img" src="./static/pictures/jonathan-borba-uB7q7aipU2o-unsplash.jpg" 
+                    loading="lazy"
+                    alt="our chef cutting Jalapeños and other vegetables"
+                    />  
+                    <div class="img-text">The Highest Quality</div>  
+                </li>
+
+                <li>
+                    <img class="gallery-img" src="./static/pictures/sebastian-coman-photography-eBmyH7oO5wY-unsplash.jpg" 
+                    loading="lazy"
+                    alt="Our head chef putting the finishing touches on one of our signature dishes"
+                    />  
+                    <div class="img-text">Attention To Detail</div>         
+                </li>
+                <li>
+                    <img class="gallery-img" src="./static/pictures/restaurant-interior-1.jpg" 
+                    loading="lazy"
+                    alt="Our main seating area with black chairs and a huge glass windows"
+                    /> 
+                    <div class="img-text">Space For Family And Friends</div>     
+                </li>
+                <li>
+                    <img class="gallery-img" src="./static/pictures/chris-liverani-oCsaxvGCehM-unsplash.jpg"
+                    loading="lazy"
+                    alt="Seating in our venue with plants to the side"
+                    />  
+                    <div class="img-text">Plants...</div>  
+                </li>
+                <li>
+                    <img class="gallery-img" src="./static/pictures/piotr-szulawski-DCmUhk54F6M-unsplash.jpg" 
+                    loading="lazy"
+                    alt="Orange bench with white tiles on the wall behind it and a table"
+                    />
+                    <div class="img-text">Beautiful Tiles</div>  
+                </li>
+                <li>
+                    <img class="gallery-img" src="./static/pictures/pizza/pizza-green.jpg" 
+                    loading="lazy"
+                    alt="Pizza with green leafs"
+                    />
+                    <div class="img-text">Pizza With Leafs</div>  
+                </li>
+                <li>
+                    <img class="gallery-img" src="./static/pictures/pizza/pizza-slice.jpg" 
+                    loading="lazy"
+                    alt="Pizza Slice"
+                    />
+                    <div class="img-text">Pizza Slice</div>  
+                </li>
+                <li>
+                    <img class="gallery-img" src="./static/pictures/pizza/pizza-on-wood.jpg" 
+                    loading="lazy"
+                    alt="Pizza on wood"
+                    />
+                    <div class="img-text">Pizza On Wood</div>  
+                </li>
+                <li>
+                    <img class="gallery-img" src="./static/pictures/pizza/pizza-1.jpg" 
+                    loading="lazy"
+                    alt="Pizza with tomatoes"
+                    />
+                    <div class="img-text">Pizza With Tomatoes On Top</div>  
+                </li>
+
+            </ul>
+
         </section>
     </main>
 

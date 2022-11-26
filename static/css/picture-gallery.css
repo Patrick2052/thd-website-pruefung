@@ -1,11 +1,125 @@
-.test-gallery img {
-    max-height: 200px;
+/*! -- OVERALL --*/
+html::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-track {
+    background: white;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--clr-accent);
+}
+html::-webkit-scrollbar-thumb:active {
+    /* background-color:; */
 }
 
+/*firefox scrollbar*/
+html {
+    scrollbar-color: var(--clr-accent);
+    /* scrollbar-: white; */
+    scrollbar-width: thin;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+/*=====================================================*/
+
+@keyframes fly-in {
+    from {
+        transform: translateY(200%);
+        filter: opacity(0)
+    } 
+    to {
+        transform: translateY(0px);
+        filter: opacity(100)
+    }
+}
+
+.test-gallery img {
+    max-height: 50vh;
+}
+
+
 .test-gallery {
-    height: 100vh;
+    /* height: 100vh; */
+    padding-top: var(--header-height);
+}
+
+.gallery-list {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1em;
+    padding: 1em 0;
+}
+
+.gallery-list > li {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.gallery-list > li img {
+    object-fit: cover;
+    height: 50vh;
+    width: 60%;
+
+    border-radius: 20px;
+
+    transition: 1000ms ease-in-out;
+
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+
+    font-size: 50px;
+}
+
+/* .gallery-list li img:hover */
+
+.zoom {
+    /* transform: scale(1.2); */
+    height: 60vh !important;
+    width: 80% !important;
+    position: relative;
+}
+
+.img-text {
+    display: none;
+}
+
+.zoom + .img-text {
+    display: block;
+    animation: 1000ms fly-in linear;
+    position: absolute;
+    top: calc(50% - 50px);
+    font-size: 50px;
+    background: rgba(29, 29, 29, 0.785);
+    padding:2px 5px;
+    border-radius: 5px;
+
+    max-width: 60%;
+    text-align: center;
+    font-family: 'Merriweather', serif; 
+    
+    /*!word break -> */
+    word-break: break-word;
+}
+
+
+@media screen and (max-width: 600px) {
+    .zoom + .img-text {
+        font-size: 30px;
+    }
 }
