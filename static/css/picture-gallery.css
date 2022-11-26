@@ -84,7 +84,35 @@ html {
     padding: 1em;
 
     font-size: 50px;
+
+    position: relative;
 }
+
+.header-container::after {
+    content: "";
+
+    position: absolute;
+    height: 200px;
+    width: 99%;
+    border-radius: 5px;
+    background-color: var(--clr-accent);
+    opacity: .3;
+    top: 50%;
+    z-index: -1;
+
+    /* background-color: #e5e5f7;
+
+    background-color: #8E4706;
+    opacity: 1;
+    background: repeating-linear-gradient( -45deg, #1a1a1a, #1a1a1a 14px, #8E4706 14px, #8E4706 70px ); */
+}
+
+.header-container h1 {
+    border-bottom: 5px solid rgba(255, 255, 255, 0.644);
+    font-family: 'Merriweather', serif !important; 
+    text-align: center;
+}
+
 
 /* .gallery-list li img:hover */
 
