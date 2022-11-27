@@ -29,3 +29,29 @@ function ObserveImage(img) {
 
     imgObserver.observe(img)
 }
+
+
+// function pageScroll() {
+    
+
+//     scrolldelay = setTimeout(() => {
+//         console.log("scroll")
+//         window.scrollBy(0,20)
+//         pageScroll();
+//     }, 100)
+
+//     if((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+//         clearTimeout(scrolldelay);
+//         scrolldelay = setTimeout(PageUp(), 2000)
+//     }
+
+// }
+
+// function PageUp() {
+//     window.scrollTo(0, 0);
+//     setTimeout(function() {
+//       pageScroll()
+//     }, 600);
+//   }
+
+// pageScroll();

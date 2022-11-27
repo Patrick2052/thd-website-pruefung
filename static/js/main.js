@@ -2,24 +2,37 @@
 
 //! ========this is the function that counts up the status numbers in the first section ============
 function countStats() {
-    const stats = document.querySelectorAll(".stat-count-number")
+    //? getting a list of all elements with class .stat-count-number
+    //difference tag and element? 
+    const stats = document.querySelectorAll(".stat-count-number");
+
+    //? looping over this list and executing code on every element
     for (let i = 0; i < stats.length; i++) {
-        const numberContainer = stats[i]
+        
+        //? assigning the element to a variable
+        const numberContainer = stats[i];
+        
+        //? reading the text inside the element (in this case the number)
+        //? and converting it to an integer
         const maxCount = parseInt(numberContainer.innerText);
+
+        //creating a counter variable
         let frame = 0;
-    
+
+        //set intervall to slow down the iteration of every count up
         const counter = setInterval(() => {
+            
+            //?adding 1 to the counter variable
             frame++
-            // console.log("interval")
-    
+
+            //? setting the text inside the element to the value of the counter variable
             numberContainer.innerHTML = frame
     
-    
+            //? using the beginning value of the element to stop the count up once its reached
             if (frame == maxCount) {
                 clearInterval(counter)
             }
         }, 70)
-    
     }
 }
 
