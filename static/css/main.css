@@ -668,13 +668,11 @@ nav a:hover {
 
 .booking-form .form-field {
     padding: .3em;
-    background-color: var(--clr-bg-section-bright);
 
     border: none;
     background: transparent;
     border-bottom: 2px solid var(--clr-bg-section-bright);
     color: rgba(167, 167, 167, 0.721);
-    position: relative;
 }
 
 
@@ -845,20 +843,12 @@ input[type=radio]:checked + .radio-label svg {
 
 
 @media only screen and (max-width: 850px) {
-    
     #hero-section {
         height: 30vh;
     }
-
- 
-    
 }
 
 @media only screen and (max-width: 750px) {
-    .hero-content-container {
-        /* margin:auto; */
-    }
-
     #hero-main-text {
         font-size: 26px;
     }

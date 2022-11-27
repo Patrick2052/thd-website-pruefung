@@ -23,7 +23,10 @@ header {
     align-items: center;
     height: var(--header-height);
     padding: 1em 1em;
-    position: absolute;
+   
+    position: fixed;
+    z-index: 99999;
+   
     width: 100%;
 
     top: 0;

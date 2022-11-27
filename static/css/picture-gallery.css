@@ -73,6 +73,10 @@ html {
 
     transition: 1000ms ease-in-out;
 
+    border: 2px solid white;
+
+    /* box-shadow: 2px 2px 2px 2px rgba(94, 94, 94, 0.1); */
+
     position: relative;
 }
 
@@ -121,6 +125,7 @@ html {
     height: 60vh !important;
     width: 80% !important;
     position: relative;
+    box-shadow: 2px 2px 2px 5px rgba(138, 138, 138, 0.1);
 }
 
 .img-text {
@@ -150,4 +155,24 @@ html {
     .zoom + .img-text {
         font-size: 30px;
     }
+}
+
+
+.back-home {
+    width: 100%;
+    margin: 100px 0;
+    text-align: center;
+}
+
+.back-home a {
+    width: 100%;
+    font-size: 30px;
+    background-color: var(--clr-accent);
+    padding: .3em 1em;
+    border-radius: var(--std-border-radius);
+}
+
+.back-home a:hover {
+    background-color: white;
+    color: var(--clr-accent)
 }
