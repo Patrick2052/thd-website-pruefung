@@ -1,22 +1,6 @@
 /*? importing fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');/*? declaring variables for this file */
-/* :root {
-    --header-height: 60px;
-    --header-gap: 2em; */
 
-    /*? color */
-    /* --clr-accent: #8E4706;
-
-    --clr-bg-section-bright: rgb(238, 238, 231);
-    --clr-bg-section-dark: #1A1D1A;
-
-    --fnt-header-sml: 27px;
-    --fnt-header-large: 40px;
-    --fnt-test-medium: 16px;
-
-
-    --std-border-radius: 2px;
-} */
 
 /*! -- OVERALL --*/
 html::-webkit-scrollbar {
@@ -108,7 +92,7 @@ html {
     left: -10000px;
 }
 
-/*! -- HEADER -- */
+/*! -- HEADER -> moved to header.css -- */
 
 /* header {
     display: flex;
@@ -198,6 +182,7 @@ nav a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     /* background-origin: */
+
 
     display: flex;
     align-items: center;
@@ -549,7 +534,7 @@ nav a:hover {
     }
 }
 
-#section-2 .fly-in {
+.fly-in {
     /* background-color: red; */
 
     animation: 1700ms section-2-fly-in;
@@ -628,14 +613,26 @@ nav a:hover {
 }
 
 
+/*! SECTION BOOKING */
+
 #section-booking {
     min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-
+    padding: 3em 0;
     /* background-color: var(--clr-bg-section-bright); */
+}
+
+#section-booking .header {
+    color: var(--clr-accent);
+    font-size: 50px;
+}
+
+#section-booking .subheader {
+    margin: 0 0 1em 0;
+    font-size: 20px;
 }
 
 #section-booking .content {
@@ -644,7 +641,21 @@ nav a:hover {
     gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 3em;
 }
+
+
+
+#section-booking .opening-hours {
+    
+    
+}
+#section-booking .opening-hours > li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
 
 
 .booking-form {
@@ -658,13 +669,28 @@ nav a:hover {
 .booking-form .form-field {
     padding: .3em;
     background-color: var(--clr-bg-section-bright);
+
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid var(--clr-bg-section-bright);
+    color: rgba(167, 167, 167, 0.721);
+    position: relative;
 }
+
+
 
 .booking-form .name {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.booking-form .name input {
+    /* width: 100%; */
+    flex-grow: 1;
 }
 
 .booking-form input[type=submit] {
@@ -684,13 +710,95 @@ nav a:hover {
 /*! radio button custom styling*/
 /* https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */
 
+.radio-selection {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-start;
+}
 
-/* #section-booking .booking-form input[type=radio] {
-    appearance: none;
+.radio-container {
+    display: flex;
     position: relative;
-    padding-left: 1em;
-} */
+}
 
+.radio-container input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+}
+
+.radio-label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* justify-content: flex-start; */
+    align-items: center;
+    transition: 200ms ease-in-out;
+    width: 35px;
+}
+
+.radio-label:hover {
+    cursor: pointer;
+}
+
+input[type=radio]:checked + .radio-label {
+    color: var(--clr-accent);
+    font-weight: 600;
+}
+input[type=radio]:checked + .radio-label .img-parent {
+    background-color: var(--clr-accent);
+    color: white;
+    
+}
+input[type=radio]:checked + .radio-label svg {
+    fill: white;
+}
+
+.radio-label .img-parent {
+    background-color: var(--clr-bg-section-bright);
+    transition: 200ms ease-in-out;
+    padding: 5px;
+    border-radius: 1px;
+    height: 30px;
+    width: 30px;
+}
+
+
+
+.radio-label .img-parent svg {
+    width: 100%;
+    fill: black;
+}
+
+/*! css for the amount select showing up*/
+.amount-select-input {
+    display: none !important;
+}
+
+.amount-select-input-container {
+    display: none;
+}
+
+.show-amount-select .amount-select-input {
+    display: block !important;
+    width: 2em;
+    font-size: 20px;
+    height: 2em;
+    border-radius: var(--std-border-radius);
+    padding-left: 1em;
+
+    border: 2px solid var(--clr-bg-section-bright);
+    background-color: transparent;
+    color: white;
+
+}
+
+.show-amount-select .amount-select-input-container {
+    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 
 
@@ -786,7 +894,15 @@ nav a:hover {
     }
     
 
- 
+    .optional-image {
+        display: block !important;
+        /*there is direct styling in the html thats why it needs to be important*/
+        background-image: url(../pictures/location-1.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+
+    }
 
 
 }

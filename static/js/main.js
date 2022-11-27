@@ -1,6 +1,6 @@
 
-//! ======== Counting up for the Stats ============
 
+//! ========this is the function that counts up the status numbers in the first section ============
 function countStats() {
     const stats = document.querySelectorAll(".stat-count-number")
     for (let i = 0; i < stats.length; i++) {
@@ -23,7 +23,7 @@ function countStats() {
     }
 }
 
-
+//!for the animation fly in of known-from section (with the logos)
 function ObserveKnownFrom() {
     //! animation for the logo fly in in known-from section
     const knownFromSection = document.getElementById("known-from")
@@ -50,7 +50,7 @@ function ObserveKnownFrom() {
 }
 
 
-//! animaiton of Section 2
+//! animaiton fly in of Section 2
 function ObserverSection2() {
     const section2 = document.getElementById("section-2")
     const section2TextContainer = document.getElementById("section-2-text-container")
@@ -72,28 +72,57 @@ function ObserverSection2() {
 
 }
 
+//!for the flying in of the booking section
+function ObserveSectionBooking() {
+    const sectionBooking = document.getElementById("section-booking")
+    const bookingContent = sectionBooking.querySelector(".content")
+    
+    const sectionBookingObserver = new IntersectionObserver((entries) => {
+        console.log("hello")
+        if (entries[0].isIntersecting === true) {
+            bookingContent.classList.add("fly-in")
+        } else {
+            bookingContent.classList.remove("fly-in")   
+        }
+    })
+
+
+    sectionBookingObserver.observe(sectionBooking);
+}
+
 
 //! handling the booking form on the bottom of the main page
+//? defining the relevant elements
 const bookingForm = document.getElementById("booking-form");
 const bookingFormSubmit = bookingForm.querySelector("input[type=submit]")
 
-// function BookingSectionRadio() {
-//     document.getElementById
-// }
-function updateSubmitText() {
-    //type can be date / time / people 
-    let date = dateField.value;
-    let time = timeField.value;
-    let amount = 0;
 
-    const template = `Book now for ${date} | ${time} (${amount})`
+
+//?definging the relevant input fileds from the DOM
+const dateField = bookingForm.querySelector("input[type=date]")
+const timeField = bookingForm.querySelector("input[type=time]")
+
+//? utility function to update the text of the submit button in the booking form
+function updateSubmitText() {
+    //type can be date / time / people
+    let date = new Date(dateField.value);
+    if (date == "Invalid Date") date = "";
+
+    let time = timeField.value;
+
+
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    date = date && time ? ` ${days[date.getDay()]} ${date.toLocaleDateString()}:` : `${date.toLocaleDateString()}`  
+
+    time = time ? `${time}` : ""
+
+    const template = `Book now for ${date} ${time}`
 
     bookingFormSubmit.value = template;
 }
 
-const dateField = bookingForm.querySelector("input[type=date]")
-const timeField = bookingForm.querySelector("input[type=time]")
-
+//? adding event listeners that update the text of the submit button on change
 dateField.addEventListener("change", (e) => {
     updateSubmitText();
 })
@@ -108,11 +137,51 @@ bookingForm.addEventListener("submit", (e) => {
     e.preventDefault();
     handleBookingSubmit(e);
 })
+
 function handleBookingSubmit(e) {
-
-
-    confirm(`Please confirm your reservation: ${dateField.value} -- ${timeField.value} -- ${"TODO"} people`)
+    e.preventDefault();
+    confirm(`Please confirm your reservation: ${dateField.value} -- ${timeField.value}`)
 }
+
+
+//? when the group value is selected a input field should appear - this is handled here
+
+
+radioContainer = document.getElementById("amount-select-radio")
+
+//the number input that is the amount of people to reserve for
+amountSelectInput = document.getElementById("amount-select-input")
+
+//the group radio button
+radioThree = document.getElementById("radio-three")
+
+
+radioContainer.addEventListener("change", (e) => {
+  
+
+    if (e.target.type == "radio") {
+
+        if (e.target.id == "radio-three") {
+            radioContainer.classList.add("show-amount-select")
+            amountSelectInput.focus();
+
+        } else {
+            radioContainer.classList.remove("show-amount-select")
+        }
+    }
+})
+
+//when the input amount changes the value in the third radio button needs to change
+amountSelectInput.addEventListener("change", (e) => {
+    radioThree.value = e.target.value
+})
+
+
+
+
+
+
+
 
 
 
@@ -126,5 +195,6 @@ window.addEventListener("load", () => {
 
     ObserveKnownFrom();
     ObserverSection2();
+    ObserveSectionBooking();
 })
 

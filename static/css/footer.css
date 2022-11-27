@@ -109,7 +109,9 @@ footer {
 }
 
 .newsletter-container input[type=email] {
-    background-color: white;
+    background-color: var(--clr-bg-section-bright);
+        
+    border-radius: var(--std-border-radius);
 }
 
 
@@ -155,7 +157,7 @@ footer {
 
 .newsletter-container input {
     padding: .4em 1em;
-    
+
 }
 
 .newsletter-container .shake {

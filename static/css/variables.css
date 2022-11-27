@@ -4,6 +4,7 @@
 
     /*? color */
     --clr-accent: #8E4706;
+    /* --clr-accent: #1E3328; */
 
     --clr-bg-section-bright: rgb(238, 238, 231);
     --clr-bg-section-dark: #1A1D1A;
@@ -13,5 +14,5 @@
     --fnt-test-medium: 16px;
 
 
-    --std-border-radius: 2px;
+    --std-border-radius: 3px;
 }
